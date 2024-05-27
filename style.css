@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+}
+
+.err {
+    font-size: small;
+    text-align: center;
+    color: red;
+    text-wrap: wrap;
+}
+
+label::after,
+.req::before {
+    content: "*";
+    color: red;
+}
+
+label,
+button {
+    margin-top: 1rem;
+    margin-bottom: 3px;
+}
+
+input {
+    border: 2px solid rgba(0, 0, 0, 0.671);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+button {
+    width: 5rem;
+    margin-right: 0;
+}
+
+#email:invalid,
+#country:invalid {
+    border: 2px solid red;
+    border-radius: 8px;
+    outline: transparent;
+}
+
+* {
+    box-sizing: border-box;
+}
