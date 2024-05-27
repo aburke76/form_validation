@@ -206,6 +206,9 @@ const countryList = [
     "Zimbabwe",
 ];
 
+import { postcodeValidator } from "postcode-validator";
+import { lookup } from "country-code-lookup";
+
 const email = document.getElementById("email");
 const country = document.getElementById("country");
 const zip = document.getElementById("zip");
@@ -239,13 +242,9 @@ country.addEventListener("input", () => {
 });
 
 zip.addEventListener("input", () => {
-    const format = /[0-9]{5}/;
-    if (!zip.value.match(format)) {
+    if (!postcodeValidator(zip.input, lookup.byCountry(country.value))) {
         zip.setCustomValidity("invalid");
-        zipError.textContent = "Enter exactly 5 numbers";
-    } else {
-        zip.setCustomValidity("");
-        zipError.textContent = "";
+        zipError.textContent = "Please enter valid zip code";
     }
 });
 
