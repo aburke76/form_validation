@@ -1,3 +1,5 @@
+// import {postcodeValidator } from "postcode-validator";
+import { lookup } from "country-code-lookup";
 const countryList = [
     "Afghanistan",
     "Albania",
@@ -205,9 +207,6 @@ const countryList = [
     "Zambia",
     "Zimbabwe",
 ];
-
-import { postcodeValidator } from "postcode-validator";
-import { lookup } from "country-code-lookup";
 
 const email = document.getElementById("email");
 const country = document.getElementById("country");

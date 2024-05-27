@@ -1,0 +1,16 @@
+{
+  "name": "form_validation",
+  "version": "1.0.0",
+  "description": "This is a simple form using javascript for validation",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "country-code-lookup": "^0.1.3"
+  }
+}
